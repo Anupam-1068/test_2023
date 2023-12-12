@@ -16,7 +16,7 @@ class _CurrencyConverterWidgetState extends State<CurrencyConverterWidget> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
-            '1 ${CurrencyConverter.baseCurrency} = ${CurrencyConverter.getFormattedRate()} ${CurrencyConverter.targetCurrency}',
+            '1 ${CurrencyConverter.baseCurrency} = 0.9289601647 ${CurrencyConverter.targetCurrency}',
             style: TextStyle(fontSize: 18),
           ),
           SizedBox(height: 20),

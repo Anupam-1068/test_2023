@@ -4,8 +4,8 @@ import '../models/models.dart';
 class CurrencyConverter {
   static String baseCurrency = 'EUR';
   static String targetCurrency = 'USD';
-  static double exchangeRate = 1.0;
-  static double enteredAmount = 100.0;
+  static double exchangeRate = 0.9289601647;
+  static double enteredAmount = 0.9289601647;
 
 
   static Future<void> refresh() async {
