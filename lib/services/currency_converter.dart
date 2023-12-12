@@ -10,7 +10,7 @@ class CurrencyConverter {
 
   static Future<void> refresh() async {
     try {
-      ExchangeRate rate = await CurrencyController.fetchExchangeRate(baseCurrency, targetCurrency);
+      ExchangeRate rate = (await CurrencyController.fetchExchangeRate(baseCurrency, targetCurrency)) as ExchangeRate;
       exchangeRate = rate.rate;
     } catch (e) {
       // Handle error

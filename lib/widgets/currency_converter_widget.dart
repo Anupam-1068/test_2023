@@ -17,21 +17,20 @@ class _CurrencyConverterWidgetState extends State<CurrencyConverterWidget> {
         children: [
           Text(
             '1 ${CurrencyConverter.baseCurrency} = ${CurrencyConverter.getFormattedRate()} ${CurrencyConverter.targetCurrency}',
-            style: TextStyle(fontSize: 20),
+            style: TextStyle(fontSize: 18),
           ),
           SizedBox(height: 20),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text('Enter Amount:'),
-              SizedBox(width: 10),
+              SizedBox(width: 8),
               Flexible(
                 child: TextField(
                   keyboardType: TextInputType.number,
                   onChanged: (value) {
-                    setState(() {
-                      CurrencyConverter.enteredAmount = double.tryParse(value) ?? 0.0;
-                    });
+                    // Do not set state here
+                    CurrencyConverter.enteredAmount = double.tryParse(value) ?? 0.0;
                   },
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
